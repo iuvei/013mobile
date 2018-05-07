@@ -1,0 +1,9 @@
+version: '3.3'
+
+services:
+  013mobile:
+    image: hub.mc.corp/mobile/013mobile:${VERSION}
+    ports:
+      - 59013:80
+    deploy:
+      replicas: 1

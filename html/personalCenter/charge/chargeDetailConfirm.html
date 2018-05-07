@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="UTF-8"/>
+    <title>充值详情</title>
+</head>
+<body>
+    <header id="chargeDetailConfirmHeader" >
+        <a  onclick="createInitPanel_Fun('charge');" class="icon_back"></a>
+        <h1 id="titleID">充值详情</h1>
+    </header>
+   <div class="content" style="padding-bottom: 16px;">
+       <p class="hint_title">第一步：查看收款信息，进行转账</p>
+       <div class="walletTop" style="border:none">
+           <ul id="chargeInfo1" class="charge-detail">
+               <p style="border-bottom: 1px dashed #cccccc;text-align: center;padding: 3px 0;font-weight:500;">提示：长按 或 双击，可选中需复制的内容.</p>
+               <li>
+                   <span>收  款  人 ： </span>
+                   <input type="text" id="cashUser" readonly="readonly">
+               </li>
+               <li>
+                   <span>收款银行：</span>
+                   <input type="text" id="cashBank" readonly="readonly">
+               </li>
+               <li id="showKaiHuBank">
+                   <span>开户银行：</span><input type="text" id="kaiHuBank" readonly="readonly">
+               </li>
+               <li>
+                   <span>收款卡号：</span>
+                   <input type="text" id="cashBankNo" readonly="readonly">
+               </li>
+               <li id="khdz">
+                   <span>开户地址：</span>
+                   <input type="text" id="yhkhdz" readonly="readonly">
+               </li>
+               <li style="display: none;">
+                   <span>充值金额：</span><input type="text" id="cash" readonly="readonly">
+               </li>
+               <li id="fuyanID" style="display: none;">
+                   <span>附 言 ： </span><input type="text" id="fuyan" readonly="readonly">
+               </li>
+           </ul>
+           <ul id="chargeInfo2">
+               <li>
+                   充值方式：<span id="payMethod"></span>
+               </li>
+               <li>
+                   充值金额：<span id="payValue"></span>
+               </li>
+           </ul>
+       </div>
+
+       <div id="charge_btn">
+           <a class="loginBtn" id="changeSubmit">立即付款</a>
+
+           <a class="loginBtn icbc_charge_btn" id="icbc_to_alipay" >支付宝转账</a>
+           <a class="loginBtn icbc_charge_btn" id="icbc_to_icbc" >工行转账</a>
+           <a class="loginBtn icbc_charge_btn" id="icbc_to_ccb" >建行转账</a>
+           <a class="loginBtn icbc_charge_btn" id="icbc_to_abc" >农行转账</a>
+
+           <a class="loginBtn cmbc_charge_btn" id="cmbc_to_alipay" >支付宝转账</a>
+           <a class="loginBtn cmbc_charge_btn" id="cmbc_to_cmbc" >中国民生银行</a>
+           <a class="loginBtn cmbc_charge_btn" id="cmbc_to_others" >选择其他银行</a>
+       </div>
+
+       <!--温馨提示 暂隐藏 -->
+       <div class="note" id="shuomingID" style="display: none;"></div>
+
+       <!--打款信息/充值提醒 -->
+       <p class="hint_title">第二步：完成转账后，填写信息，提交申请</p>
+       <div id="remitInfo" class="remitInfo">
+           <p style="color:red;text-align: center;">完成转账后，请填写下面的打款信息并提交</p>
+           <p>真实姓名：<span>请填写持卡人姓名</span>	</p>
+           <input type="text" id="remitName">
+           <p>转账金额：<span>与转账金额需一致，否则影响上分</span></p>
+           <input type="number" id="remitMoney" readonly>
+           <p>转账时间：<span> 例如：20点12分请填写2012</span>	</p>
+           <input type="number" id="remitTime" maxlength="4" onkeyup="this.value=this.value.replace(/\D/g,'')">
+           <a class="loginBtn" id="remitSubmit" style="display: none;">已转账，提交平台审核</a>
+           <p style="padding:10px 10px 0;">温馨提醒：<span style="color: #e12048;">每次充值时需从充值页面重新获取</span>，因客户充值错误所导致的损失由客户自己承担，与平台无关！</p>
+       </div>
+    </div>
+</body>
+</html>

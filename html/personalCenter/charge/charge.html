@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>充值</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+</head>
+<body>
+<header id="chargeHeader" >
+    <a onclick="goBack.myLottery();" class="icon_back" ></a>
+    <h1>充值</h1>
+</header>
+<div class="content" style="padding-bottom:1rem">
+    <div id="welcome">
+        <span id="welcomeUser">--</span>,您好
+        <br />
+        账户余额：<span id="lotteryMoney">--</span>
+    </div>
+    <div class="remind" style="margin-top: 10px;margin-bottom: 20px;">
+        <dl  id="tonghangzz" >
+        </dl>
+    </div>
+    <div style="margin-top: 10px;margin-bottom: 20px;" id="tonghangID">
+        <p class="whitetext" id="textID">充值金额(重要提示：范围为10-50000元)</p>
+        <input type="text" name="payMoney" id="tonghangpayMoney" value="" placeholder="请输入充值金额" onkeyup="return ValidateNumber12(this,value)"/>
+        <a class="loginBtn"  id="tonghangsubmit">确定</a>
+
+        <ul id="hint" style="padding: 6px 10px;line-height: 22px;">
+            <li style="color: #e12048">充值说明：</li>
+            <li>1、登入点击【转账到银行卡】-> <span style="color: #e12048">转账完成提交充值订单</span>。</li>
+            <li>2、平台帐号：<span style="color: #e12048">每次充值时需从充值页面重新获取</span>，因客户充值错误所导致的损失由客户自己承担，与平台无关！</li>
+            <li id="show_other_hint">3、支持通道：此充值通道同时还支持<span style="color: #e12048">银行转账，同行跨行充值</span>。</li>
+            <li id="show_icbc_hint">3、支持通道：此充值通道同时还支持<span style="color: #e12048">同行或者跨行转账，包括工行转工行、建行转工行、农行转工行等</span>。</li>
+            <li>4、正常转账成功后<span style="color: #e12048">1-5分钟</span>内资金将会自动到账(遇银行延迟除外)。超时未到请联系客服咨询。</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
